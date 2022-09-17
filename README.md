@@ -1,5 +1,3 @@
-# Desenvolvimento WEB básico
-
-<h1>Módulo III Desenvolvimento WEB I</h1>
+# Desenvolvimento WEB I - Básico
 
 <p>Exercícios do curso 'Formação de Desenvolvedores para Tecnologia de Informação - Ti', da UNOESC em Joaçaba-SC</p>
