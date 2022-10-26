@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <link rel="shortcut icon" href="./assets/img/icon.png" />
+
+    <title>DÉVI-TEÍ - Home</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="./assets/img/logo.png" alt="DÉVI-TEÍ" title="DÉVI-TEÍ" />
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+            aria-controls="menu"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sobre.html">Sobre</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contato.html">Contato</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Cursos
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">Informática</a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Culinária</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Procurar
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="contato">
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Email <i class="fas fa-envelope"></i></h5>
+            <h6 class="card-subtitle mb-2 text-muted"><a href="#">empresaboa@empresa.com</a></h6>
+            <p class="card-text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </p>
+            <a href="#" class="card-link">Email Suporte</a>
+            <i class="fas fa-envelope"></i>
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Instagram             <a class="social" href="http://www.instagram.com" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a></h5>
+            <h6 class="card-subtitle mb-2 text-muted"><a href="#">@empresaBoa</a></h6>
+            <p class="card-text">
+              Venha conferir um pouco mais da nossa empresa boa.
+            </p>
+            <a href="http://www.twitter.com" class="card-link">Twitter</a>
+            <a href="http://www.facebook.com  " class="card-link">Facebook</a>
+            </a>
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Endereço <i class="fas fa-map-marker-alt"></i></h5>
+            <h6 class="card-subtitle mb-2 text-muted">Matriz</h6>
+            <p class="card-text">
+              RJ-Rua das empresas boas. (0800) 8855-9956
+            </p>
+            <a href="#" class="card-link">WhatsApp</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="news" class="container">
+        <h1 class="text-center">Receba Novidades</h1>
+        <p class="text-center">
+          Inscreva-se na nossa <em>Newsletter</em> e receba todas as novidades
+          dos nossos cursos <em>online</em>:
+        </p>
+        <form name="news" method="post" action="assinar.js">
+          <div class="input-group input-group-lg">
+            <input
+              type="email"
+              name="email"
+              class="form-control"
+              placeholder="Digite seu e-mail"
+              required
+            />
+            <span class="input-group-text">
+              <button type="submit" class="btn fa-lg">
+                <i class="fas fa-check"></i>
+              </button>
+            </span>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 col-12 text-center">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Rua da Assembleia, 10<br />Rio de Janeiro - RJ</p>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-12 text-center">
+            <i class="fas fa-mobile-alt"></i>
+            <p>(011) 1406<br />(0800) 111406</p>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-12 text-center">
+            <i class="fas fa-envelope"></i>
+            <p>devi@tei.com</p>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-xl-6 col-lg-6">
+            2022 - Todos os direitos reservados
+          </div>
+          <div class="col-xl-6 col-lg-6 icones">
+            <a class="social" href="http://www.facebook.com" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="social" href="http://www.instagram.com" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a class="social" href="http://www.twitter.com" title="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
 
+    <link rel="shortcut icon" href="./assets/img/icon.png" />
+
     <title>DÉVI-TEÍ - Home</title>
   </head>
 
@@ -62,13 +64,15 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="#">Informática</a>
+                    <a class="dropdown-item" href="informatica.html"
+                      >Informática</a
+                    >
                   </li>
                   <li>
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">Culinária</a>
+                    <a class="dropdown-item" href="culinaria.html">Culinária</a>
                   </li>
                 </ul>
               </li>
@@ -176,7 +180,156 @@
           <span class="visually-hidden">Próximo</span>
         </button>
       </section>
+
+      <section id="cursos" class="container">
+        <h1 class="text-center">Conheça nossos Cursos</h1>
+        <p class="text-center">
+          Faça seu curso onde estiver, apenas conectado à internet! Cursos
+          disponíveis 24 horas por dia!
+        </p>
+        <div class="row">
+          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="./assets/img/curso1.jpg"
+                class="card-img-top"
+                alt="Curso de montagem e manutenção"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Curso de Montagem de Manutenção</h5>
+                <p class="card-text">
+                  Aprenda a montar, formatar e instalar Sistemas Operacionais
+                  para toda a família e amigos!
+                </p>
+                <a href="#" class="btn btn-info">Ver Curso</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="./assets/img/curso2.jpg"
+                class="card-img-top"
+                alt="Curso de Python"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Curso de Python</h5>
+                <p class="card-text">
+                  Aprenda a desenvolver nesta incrível linguagem!
+                </p>
+                <a href="#" class="btn btn-info">Ver Curso</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="./assets/img/curso3.jpg"
+                class="card-img-top"
+                alt="Curso de PHP"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Curso de PHP</h5>
+                <p class="card-text">
+                  Aprenda a desenvolver para web (back-end) com uma das
+                  linguagens mais utilizadas na área!
+                </p>
+                <a href="#" class="btn btn-info">Ver Curso</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="./assets/img/curso4.jpg"
+                class="card-img-top"
+                alt="Curso de HTML"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Curso de HTML</h5>
+                <p class="card-text">
+                  Aprenda a desenvolver para web (front-end) com uma das
+                  linguagens mais utilizadas na área!
+                </p>
+                <a href="#" class="btn btn-info">Ver Curso</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="jumbotron">
+        <div class="container text-center">
+          <i class="fas fa-quote-left"></i>
+          <span class="lead font-italic"
+            >Eu fiz dois cursos no DÉV-TEÍ <em>online</em>, foram ótimos cursos
+            que melhoraram minha capacitação e abriu as portas do mercado de
+            trabalho, até que eu cheguei na Maicrosofiti e me tornei CEO.
+            Recomendo fortemente.</span
+          >
+          <i class="fas fa-quote-right"></i>
+        </div>
+      </section>
+
+      <section id="news" class="container">
+        <h1 class="text-center">Receba Novidades</h1>
+        <p class="text-center">
+          Inscreva-se na nossa <em>Newsletter</em> e receba todas as novidades
+          dos nossos cursos <em>online</em>:
+        </p>
+        <form name="news" method="post" action="assinar.js">
+          <div class="input-group input-group-lg">
+            <input
+              type="email"
+              name="email"
+              class="form-control"
+              placeholder="Digite seu e-mail"
+              required
+            />
+            <span class="input-group-text">
+              <button type="submit" class="btn fa-lg">
+                <i class="fas fa-check"></i>
+              </button>
+            </span>
+          </div>
+        </form>
+      </section>
     </main>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 col-12 text-center">
+            <p>Rua da Assembleia, 10<br />Rio de Janeiro - RJ</p>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-12 text-center">
+            <i class="fas fa-mobile-alt"></i>
+            <p>(011) 1406<br />(0800) 111406</p>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-12 text-center">
+            <i class="fas fa-envelope"></i>
+            <p>devi@tei.com</p>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-xl-6 col-lg-6">
+            2022 - Todos os direitos reservados
+          </div>
+          <div class="col-xl-6 col-lg-6 icones">
+            <a class="social" href="http://www.facebook.com" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="social" href="http://www.instagram.com" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a class="social" href="http://www.twitter.com" title="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
