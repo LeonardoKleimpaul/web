@@ -185,9 +185,7 @@ hr {
 /*-------------------Pagina Informática*/
 
 .sectionCursos {
-  display: flex;
-  flex-direction: column;
-  height: 800px;
+  height: 1000px;
   background-color: #072851;
   padding: 40px;
 }
@@ -212,10 +210,40 @@ hr {
   flex-wrap: wrap;
   color: white;
   height: fit-content;
+  list-style-type: none;
+  font-family: monospace;
 }
 
-.listaCursos ul {
+h2 {
+  font-family: monospace;
+  text-transform: uppercase;
+}
+
+.listaCursos li {
   width: 350px;
+  margin: 13px;
+}
+
+.containerBotao {
+  display: flex;
+  justify-content: space-around;
+}
+
+#botao {
+  width: 300px;
+  height: 70px;
+  color: #000;
+  background-color: #a3ffbf;
+  border-radius: 20px;
+  font-size: 20px;
+  font-family: monospace;
+}
+
+/*-------------------Pagina Culinaria*/
+
+#imgCulinaria {
+  max-width: 1920px;
+  max-height: 900px;
 }
 
 @media (min-width: 1400px) {
