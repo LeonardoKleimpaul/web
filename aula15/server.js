@@ -1,31 +1,47 @@
 const express = require('express')
-const bodyParser = require('body-parser')
 
 const app = express()
 const porta = 8080
 
-app.use(express.static('public'))
-app.use(bodyParser.urlencoded({ extended: false }))
+// Instancia o servidor
+app.listen(porta, () => console.log(`Servidor iniciado na porta: ${porta}`))
 
-let valor1, valor2, operacao
+// Responde a requisição no endereço http://localhost:8080/
+app.get('/', (request, response) => {
+  response.status(200).send('<h2>Exemplo de servidor node.js</h2>')
+})
 
+function dormir(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms))
+}
+
+// Tratamento da requisição GET
 app.get('/processa-calc', function (req, res) {
+  let valor1, valor2, operacao
+
   valor1 = parseInt(req.query['fValor1'])
   valor2 = parseInt(req.query['fValor2'])
   operacao = parseInt(req.query['fOperacao'])
 
-  console.log(valor1, valor2, operacao)
-
-  processaRequisicao(res)
+  // Faz uma pausa intencional
+  dormir(10).then(() => {
+    processaRequisicao(res, valor1, valor2, operacao)
+  })
 })
 
-app.get('/', (request, response) => {
-  response.status(200).send()
+// Tratamento da requisição POST
+// Exemplo com arrow function em vez de function convencional
+app.post('/processa-calc', (req, res) => {
+  let valor1, valor2, operacao
+
+  valor1 = parseInt(req.body.fValor1)
+  valor2 = parseInt(req.body.fValor2)
+  operacao = parseInt(req.body.fOperacao)
+
+  processaRequisicao(res, valor1, valor2, operacao)
 })
 
-app.listen(porta, () => console.log(`Servidor iniciado: ${porta}`))
-
-function processaRequisicao(res) {
+function processaRequisicao(res, valor1, valor2, operacao) {
   let msgAlert = 'O resultado da operação foi: '
   let resultado = 0
 
@@ -69,12 +85,13 @@ function processaRequisicao(res) {
                 <i class="fas fa-door-open"></i>
                 Voltar
             </button>
-             
+            &nbsp
             <button type="button" onclick="alert('${msgAlert}');" class="btn btn-primary">
                 <i class="fab fa-js-square"></i></i>
-                Java
+                JavaScript
             </button>
         </div>
     `
+
   res.send(HTML)
 }
