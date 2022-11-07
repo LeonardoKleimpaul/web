@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Span</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="row">
+      <div class="col d-flex justify-content-center">
+        <input name="MyColorPicker" type="color" id="MyColorPicker" />
+        <button class="btn btn-dark" onclick="mudaCor()" id="botaoMudaCor">
+          Mudar Cor
+        </button>
+        <div id="mudaCor"></div>
+      </div>
+    </div>
+
+    <section class="container">
+      <h1>Escreva aqui</h1>
+      <form action="/" id="formulario" method="GET">
+        <label for="texto"></label>
+        <input type="text" id="texto" name="texto" />
+        <button type="submit">Enviar</button>
+      </form>
+      <hr />
+      <span id="msg" class="msg"></span>
+      <hr />
+    </section>
+    <script src="/public/3/index.js"></script>
+  </body>
+</html>
