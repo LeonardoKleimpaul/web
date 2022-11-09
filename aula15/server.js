@@ -11,7 +11,7 @@ app.get('/', (request, response) => {
   response.status(200).send('<h2>Exemplo de servidor node.js</h2>')
 })
 
-function dormir(ms) {
+function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms))
 }
 
@@ -24,7 +24,7 @@ app.get('/processa-calc', function (req, res) {
   operacao = parseInt(req.query['fOperacao'])
 
   // Faz uma pausa intencional
-  dormir(10).then(() => {
+  sleep(10).then(() => {
     processaRequisicao(res, valor1, valor2, operacao)
   })
 })
