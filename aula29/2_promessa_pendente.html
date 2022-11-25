@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      let promessa = new Promise((resolve, reject) => {
+        try {
+          throw new Error('Forçando um erro!')
+          // Promessa executada com sucesso
+          setTimeout(() => {
+            // Ponto de solução da promessa
+            resolve('Promessa concluída com sucesso!')
+            console.log('Promessa cumprida!')
+          }, 3000)
+        } catch (erro) {
+          // Erro na execução da promessa
+
+          setTimeout(() => {
+            // Promessa rejeitada
+            reject(erro)
+          }, 3000)
+        }
+      })
+
+      console.log(promessa)
+
+      setTimeout(() => {
+        console.log(promessa)
+      }, 5000)
+    </script>
+  </head>
+  <body></body>
+</html>
