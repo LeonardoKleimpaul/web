@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Fetch</title>
+  </head>
+  <body>
+    <ul id="usuarios"></ul>
+
+    <script>
+      const lista = document.getElementById('usuarios')
+
+      fetch('https://randomuser.me/api?results=5')
+        .then(resposta => resposta.json())
+        .then(resposta => {
+          console.log('Sucesso!')
+          let usuarios = resposta.results
+
+          for (usuario of usuarios) {
+            //console.log(usuario);
+
+            let item = document.createElement('li')
+            let span = document.createElement('span')
+            let img = document.createElement('img')
+            let hr = document.createElement('hr')
+
+            img.src = `${usuario.picture.medium}`
+            span.appendChild(img)
+
+            span.innerHTML += `: ${usuario.name.title} ${usuario.name.first} ${usuario.name.last}`
+
+            item.appendChild(span)
+            item.appendChild(hr)
+            lista.appendChild(item)
+
+            //.appendChild(span).appendChild(img)
+
+            // span.innerHTML = img
+            // img.innerHTML = `${usuario.picture.medium}`
+            // lista.appendChild(span)
+          }
+        })
+        .catch(erro => console.log('Oops!' + erro))
+        .finally(() => console.log('Requisição finalizada!'))
+    </script>
+  </body>
+</html>
