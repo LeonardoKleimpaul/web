@@ -1,11 +1,12 @@
-const novaBusca = document.getElementById('form')
+const novaBusca = document.querySelector('#form')
 const chave = '13b1133f06c97e924e08be416e9e9352'
-const input = document.getElementById('input')
-const cidade = input.value
-console.log(cidade)
 
 novaBusca.addEventListener('submit', e => {
   e.preventDefault()
+
+  const input = document.querySelector('#input')
+  const cidade = input.value
+  console.log(cidade)
 
   getTempoAA()
 
