@@ -1,20 +1,25 @@
-let nomeForm, emailForm;
-const sURL = 'http://localhost:8081/api/usuarios/';
+let idForm, descrForm, qtdForm, vlrForm
+const sURL = 'http://localhost:8081/api/produtos'
 
 window.onload = function (e) {
-    nomeForm = document.querySelector('#iNome');
-    emailForm = document.querySelector('#iEmail');
-};
+  idForm = document.querySelector('#iId')
+  descrForm = document.querySelector('#iDescricao')
+  qtdForm = document.querySelector('#iQuantidade')
+  vlrForm = document.querySelector('#iValor')
+}
 
-async function incluirUsuario() {
-    const nome = nomeForm.value; 
-    const email = emailForm.value;
+async function incluirProduto() {
+  const id = idForm.value
+  const descricao = descrForm.value
+  const quantidade = qtdForm.value
+  const valor = vlrForm.value
 
-    axios.post(sURL, { nome, email })
-        .then(res => {
-            alert(res.data.mensagem);
-            console.log(res.data.usuario);
-            setTimeout(() => window.location.href = '/front-end', 100);
-        })
-        .catch(res => console.log(res.response.data));
+  axios
+    .post(sURL, { id, descricao, quantidade, valor })
+    .then(res => {
+      //alert(res.data.mensagem)
+      console.log(res.data)
+      setTimeout(() => (window.location.href = '/'), 100)
+    })
+    .catch(res => console.log(res.response.data))
 }
