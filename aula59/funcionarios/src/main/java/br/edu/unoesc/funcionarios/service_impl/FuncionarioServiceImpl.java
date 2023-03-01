@@ -63,14 +63,13 @@ public class FuncionarioServiceImpl implements FuncionarioService {
 	@Override
 	public List<Funcionario> listar() {
 		List<Funcionario> funcionarios = new ArrayList<Funcionario>();
-		
+
 		// Recupera todos os registros da tabela
 		Iterable<Funcionario> itens = repositorio.findAll();
-		
+
 		// Cria uma cópia dos dados na lista 'livros'
 		itens.forEach(funcionarios::add);
-		
-		
+
 		return funcionarios;
 	}
 
@@ -82,26 +81,25 @@ public class FuncionarioServiceImpl implements FuncionarioService {
 
 	@Override
 	public Funcionario buscar(long id) {
-		// TODO Auto-generated method stub
-		return null;
+		Optional<Funcionario> obj = repositorio.findById(id);
+
+		return obj.orElseThrow(() -> new ObjectNotFoundException("Funcionario não encontrado! Id: ", id));
 	}
 
 	@Override
 	public Funcionario buscarPorId(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return repositorio.findById(id).orElse(new Funcionario());
+
 	}
 
 	@Override
 	public Optional<Funcionario> porId(long id) {
-		// TODO Auto-generated method stub
-		return Optional.empty();
+		return repositorio.findById(id);
 	}
 
 	@Override
 	public List<Funcionario> buscarPorNome(String nome) {
-		// TODO Auto-generated method stub
-		return null;
+		return repositorio.findByNomeContainingIgnoreCase(nome);
 	}
 
 	@Override
@@ -111,9 +109,8 @@ public class FuncionarioServiceImpl implements FuncionarioService {
 	}
 
 	@Override
-	public List<Funcionario> buscarPossuiDependentes(Integer numDependentes) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Funcionario> buscarPossuiDependentes(String numDependentes) {
+		return repositorio.possuiDependentes(numDependentes);
 	}
 
 }

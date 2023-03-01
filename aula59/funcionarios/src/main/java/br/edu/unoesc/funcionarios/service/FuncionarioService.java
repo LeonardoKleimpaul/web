@@ -27,6 +27,6 @@ public interface FuncionarioService {
 	
 	List<Funcionario> buscarPorNome(String nome);
 	List<Funcionario> buscarPorFaixaSalarial(BigDecimal salarioMinimo, BigDecimal salarioMaximo);
-	List<Funcionario> buscarPossuiDependentes(Integer numDependentes);
+	List<Funcionario> buscarPossuiDependentes(String numDependentes);
 
 }

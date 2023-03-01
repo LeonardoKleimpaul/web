@@ -17,6 +17,6 @@ import br.edu.unoesc.funcionarios.model.Funcionario;
 		public List<Funcionario> porQtdSalario(@Param("salario") Integer salario);
 		
 		@Query("Select l from Funcionario l where num_dep >= 1")
-		public List<Funcionario> PossuiDependentes(String filtro);
+		public List<Funcionario> possuiDependentes(String filtro);
 	}
 
