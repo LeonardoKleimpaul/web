@@ -1,0 +1,1 @@
+insert into funcionario values (null, "João Padaria", 1, 1850, 1/1/2000)
